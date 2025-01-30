@@ -217,7 +217,7 @@ h2 {
 /* Skills Section */
  /* Experience Section Styling */
 #experience {
-    padding: 50px 20px;
+    padding: 10px;
     background-color: var(--background-color); /* Light background color for contrast */
   }
   
@@ -274,7 +274,7 @@ h2 {
   }
   /* Education Section Styling */
 #education {
-    padding: 50px 20px;
+    padding: 10px;
     background-color: var(--background-color); /* White background for contrast */
   }
   
@@ -332,7 +332,7 @@ h2 {
   
   /* Projects Section */
 #projects {
-    padding: 50px 20px;
+    padding: 10px;
     background-color: var(--background-color); /* Light grey background */
   }
   
@@ -367,7 +367,7 @@ h2 {
   
   .project-item img {
     width: 100%;
-    height: 200px;
+    height: 100px;
     object-fit: cover;
   }
   
@@ -391,7 +391,7 @@ h2 {
   }
   /* Skills Section */
 #skills {
-  padding: 50px 20px;
+  padding: 10px;
   background-color: background var(--background-color); /* Light greenish background */
 }
 
@@ -439,7 +439,7 @@ h2 {
 }
 /* Skills Section */
 #skills {
-    padding: 50px 20px;
+    padding: 10px;
     background-color: var(--background-color); /* Light greenish background */
   }
   
@@ -493,7 +493,7 @@ h2 {
   }
   /* Interests Section */
 #interests {
-    padding: 50px 20px;
+    padding: 10px;
     background-color: var(--background-color); /* Light grey background */
   }
   
@@ -543,7 +543,7 @@ h2 {
   }
   /* Awards Section */
 #awards {
-    padding: 50px 20px;
+    padding: 0px;
     background-color: var(--background-color); /* Light greenish background */
   }
   
@@ -593,7 +593,7 @@ h2 {
   }
   /* Testimonials Section */
 #testimonials {
-    padding: 50px 20px;
+    padding: 0px;
     background-color: var(--background-color); /* Light grey background */
   }
   
@@ -659,16 +659,20 @@ h2 {
     font-style: italic;
   }
   /* Contact Section */
-/* Contact Section */
+
 #contact {
-  padding: 4rem 0;
+  padding: 10px;
   background-color: var(--background-color);
+  align-items: center; /* Center the form vertically */
 }
 
 #contact form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%; /* Set a default width */
+  max-width: 1500px; /* Limit the maximum width of the form */
+  align-items: center; /* Center the form vertically */
 }
 
 #contact input,
@@ -679,11 +683,13 @@ h2 {
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--background-color);
+  width: 60%; 
 }
 
 #contact textarea {
   resize: vertical;
   min-height: 150px;
+  width: 60%; 
 }
 .contact-form input,
   .contact-form textarea {
@@ -710,7 +716,7 @@ h2 {
 
 /* Footer */
 footer {
-  padding: 2rem 0;
+  padding: 0px;
   background-color: var(--background-color);
   text-align: center;
   border-top: 1px solid var(--border-color);
