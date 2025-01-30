@@ -1,0 +1,981 @@
+/* Base Styles */
+:root {
+  --primary-color: #2e8b57;
+  --secondary-color: #1a6d4b;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --light-text-color: #666;
+  --border-color: #ddd;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --text-color: #f9f9f9;
+  --light-text-color: #ccc;
+  --border-color: #444;
+  --shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #2e8b57; /* Light green color for email link */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 10px; /* Increase size of the icons */
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Make icons larger on hover */
+  color: #2e8b57; /* Light green color on hover */
+}
+
+/* Specific icon sizes */
+.social-icon i {
+  font-size: 30px; /* Adjust size for each icon */
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+nav {
+  background-color: var(--background-color);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none; /* Remove bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+nav .nav-links li {
+  display: inline-block; /* Display list items inline */
+  margin: 0; /* Remove default margin */
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav .nav-links a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+nav .nav-links a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+nav .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+nav .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Hero Section */
+#hero {
+  height: 70vh; /* Reduced height */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/Hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+#hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-content .highlight {
+  color: var(--primary-color);
+}
+
+#hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#hero .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#hero .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+/* About Section */
+#about {
+  padding: 4rem 0;
+}
+
+#about .about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--light-text-color);
+}
+
+/* Skills Section */
+ /* Experience Section Styling */
+#experience {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light background color for contrast */
+  }
+  
+  #experience h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green for headings */
+    margin-bottom: 30px;
+  }
+  
+  .experience-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 4px solid var(--secondary-color); /* Green border for visual hierarchy */
+    background: var(--background-color); /* White card-like background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .experience-item h2 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .experience-item h3 {
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+  }
+  
+  .experience-item p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .experience-item ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .experience-item li {
+    list-style-type: disc;
+    color: var(--light-text-color);
+    margin: 5px 0;
+  }
+  /* Styling for Links in Experience Section */
+.experience-item a {
+    color: var(--secondary-color); /* Light green for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the links stand out */
+  }
+  
+  .experience-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: var(--primary-color); /* Slightly darker green on hover */
+  }
+  /* Education Section Styling */
+#education {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* White background for contrast */
+  }
+  
+  #education h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green for headings */
+    margin-bottom: 30px;
+  }
+  
+  .education-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color); /* Green left border */
+    background: var(--background-color); /* Light grey card background */
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .education-item h2 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .education-item h3 {
+    color: var(--light-text-color);
+    margin-bottom: 10px;
+  }
+  
+  .education-item p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: var(--light-text-color);
+  }
+  
+  .education-item ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .education-item li {
+    list-style-type: disc;
+    color: var(--text-color);
+    margin: 5px 0;
+  }
+  
+  .education-item a {
+    color: var(--primary-color); /* Light green for links */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .education-item a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color); /* Slightly darker green on hover */
+  }
+  
+  /* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light grey background */
+  }
+  
+  #projects h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green */
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .project-item {
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-item h3 {
+    margin: 15px;
+    font-size: 1.2em;
+    color: var(--primary-color);
+  }
+  
+  .project-item p {
+    margin: 0 15px 15px;
+    color: light var(--light-text-color);
+  }
+  
+  .project-item a {
+    text-decoration: none;
+  }
+  
+  .project-item a:hover h3 {
+    text-decoration: underline;
+  }
+  /* Skills Section */
+#skills {
+  padding: 50px 20px;
+  background-color: background var(--background-color); /* Light greenish background */
+}
+
+#skills h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background:var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-category li {
+  margin: 10px 0;
+  color: var(--text-color);
+  font-size: 1em;
+}
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light greenish background */
+  }
+  
+  #skills h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .skill-category {
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-category h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .skill-category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skill-category li {
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: 1em;
+  }
+  
+  .skill-category li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  /* Interests Section */
+#interests {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light grey background */
+  }
+  
+  #interests h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green */
+    margin-bottom: 30px;
+  }
+  
+  .interests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .interest-item {
+    text-align: center;
+    background:var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .interest-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .interest-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .interest-item p {
+    color:var(--light-text-color);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  /* Awards Section */
+#awards {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light greenish background */
+  }
+  
+  #awards h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green */
+    margin-bottom: 30px;
+  }
+  
+  .awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .award-item {
+    text-align: center;
+    background:var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .award-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .award-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .award-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .award-item p {
+    color: var(--light-text-color);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  /* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background-color: var(--background-color); /* Light grey background */
+  }
+  
+  #testimonials h1 {
+    text-align: center;
+    color: var(--primary-color); /* Light green */
+    margin-bottom: 30px;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-item {
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-text {
+    font-size: 1em;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .testimonial-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .testimonial-name:hover {
+    text-decoration: underline;
+  }
+  
+  .testimonial-role {
+    color: var(--text-color);
+    font-style: italic;
+  }
+  /* Contact Section */
+/* Contact Section */
+#contact {
+  padding: 4rem 0;
+  background-color: var(--background-color);
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    color: var(--text-color);
+  }
+.contact-form button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#contact .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  background-color: var(--background-color);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+footer .social-links a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Dark/Light Mode Toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
+  }
+
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  #hero .hero-content p {
+    font-size: 1rem;
+  }
+}
+/* Awards Section */
+#awards {
+  padding: 4rem 0;
+  background-color: var(--background-color);
+}
+
+#awards .awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#awards .award {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#awards .award:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+#awards .award i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+#awards .award h3 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+#awards .award p {
+  font-size: 1rem;
+  color: var(--light-text-color);
+}
+
+/* Hero Section Adjustments */
+#hero {
+  height: 40vh; /* Reduced height */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/Hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin: 0.5in; /* Half-inch margin on all sides */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: var(--shadow); /* Add shadow for floating effect */
+}
+
+#hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-content .highlight {
+  color: var(--primary-color);
+}
+
+#hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#hero .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#hero .btn:hover {
+  background-color: var(--secondary-color);
+}
+/* Dark Theme */
+.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: #f9f9f9;
+  --light-text-color: #ccc;
+  --border-color: #444;
+  --shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Apply dark mode to all sections */
+body.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navigation */
+nav.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Hero Section */
+#hero.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* About Section */
+#about.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Skills Section */
+#skills.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Projects Section */
+#projects.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Experience Section */
+#experience.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Education Section */
+#education.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Interests Section */
+#interests.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Awards Section */
+#awards.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Testimonials Section */
+#testimonials.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Contact Section */
+#contact.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Footer */
+footer.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+/* Floating WhatsApp Button */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+#whatsapp-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* WhatsApp green */
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#whatsapp-button a:hover {
+  background-color: #128c7e; /* Darker green on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#whatsapp-button i {
+  font-size: 30px;
+  color: white;
+}
