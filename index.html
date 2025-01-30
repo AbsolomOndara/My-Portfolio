@@ -205,7 +205,7 @@
           <!-- Project 1 -->
           <div class="project-item">
             <a href="https://worldwaysone.co.ke/" target="_blank">
-              <img src="images/Project 1.jpeg" alt="Worldwaysone Venture Website">
+              <img src="images/Project 1.jpeg" alt="Worldwaysone Venture Website" class="project-item img"> 
               <h3>Worldwaysone Venture</h3>
             </a>
             <p>A corporate website showcasing the services and values of Worldwaysone Venture Limited.</p>
@@ -214,7 +214,7 @@
           <!-- Project 2 -->
           <div class="project-item">
             <a href="https://www.worldwaysonedevelopers.co.ke/" target="_blank">
-              <img src="images/Project 2.jpg" alt="Worldwaysone Developers Website">
+              <img src="images/Project 2.jpg" alt="Worldwaysone Developers Website" class="project-item img"> 
               <h3>Worldwaysone Developers</h3>
             </a>
             <p>A professional portfolio website highlighting the software solutions offered by Worldwaysone Developers.</p>
@@ -223,7 +223,7 @@
           <!-- Project 3 -->
           <div class="project-item">
             <a href="https://worldwaysonedevelopers254.github.io/Fast-Link-Internet/" target="_blank">
-              <img src="images/Project 4.jpg" alt="Fastlink Internet Website">
+              <img src="images/Project 4.jpg" alt="Fastlink Internet Website" class="project-item img"> 
               <h3>Fastlink Internet Solutions</h3>
             </a>
             <p>A business website for an internet provider, showcasing plans, services, and customer support solutions.</p>
@@ -232,7 +232,7 @@
           <!-- Project 4 -->
           <div class="project-item">
             <a href="https://worldwaysonedevelopers254.github.io/UConnect-Internet-Service-Provider/" target="_blank">
-              <img src="images/Project 5.jpg" alt="Velnet Internet Service Providers Website">
+              <img src="images/Project 5.jpg" alt="Velnet Internet Service Providers Website" class="project-item img"> 
               <h3>Velnet Internet Service Providers</h3>
             </a>
             <p>An internet service provider website offering package details, client portals, and contact options.</p>
@@ -424,14 +424,32 @@
             <form action="#" method="POST" class="contact-message-form" id="whatsappForm">
               <input type="text" id="name" name="name" placeholder="Your Name" required />
               <input type="email" id="email" name="email" placeholder="Your Email" required />
-              <textarea id="message" name="message" placeholder="Say Something 💬
-              " rows="5" required></textarea>
+              <textarea id="message" name="message" placeholder="Say Something 💬" rows="5" required></textarea>
               <button type="submit">Send Message</button>
             </form>
           </div>
-      
-        </div>            
+          
+          <script>
+            document.getElementById("whatsappForm").addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent the form from submitting the traditional way
+          
+              // Get form values
+              const name = document.getElementById("name").value;
+              const email = document.getElementById("email").value;
+              const message = document.getElementById("message").value;
+          
+              // Format the message for WhatsApp
+              const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+          
+              // WhatsApp API URL
+              const whatsappUrl = `https://wa.me/254112293409?text=${whatsappMessage}`;
+          
+              // Open WhatsApp in a new tab
+              window.open(whatsappUrl, "_blank");
+            });
+          </script>          
 </section>
+
 <!-- Floating WhatsApp Button -->
 <div id="whatsapp-button">
   <a href="https://wa.me/254112293409" target="_blank" aria-label="Chat on WhatsApp">
@@ -445,13 +463,13 @@
     <div class="container">
       <p>&copy; <span id="year"></span> Absolom Ondara. All rights reserved.</p>
       <div class="social-links">
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/AbsolomOndara" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/absolom-ondara-602789326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/OndaraAbsolom" target="_blank"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="Script.js"></script>
 </body>
 </html>
