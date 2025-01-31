@@ -158,6 +158,7 @@ nav .menu-toggle {
 #hero .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 #hero .hero-content .highlight {
@@ -984,4 +985,11 @@ footer.dark-theme {
 #whatsapp-button i {
   font-size: 30px;
   color: white;
+}
+.nav-links li a.isActive {
+  background-color: #f0f0f0; /* Light grey */
+  /* OR */
+  background-color: #e0f7e0; /* Light green */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  padding: 5px 10px; /* Optional: Add padding for better appearance */
 }
